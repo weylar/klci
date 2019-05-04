@@ -1,0 +1,457 @@
+
+body{
+	font-family: 'Raleway', sans-serif;
+}
+
+.navbar{
+	background-color: #53c68c;
+	 margin-bottom: 0;
+	 opacity: 0.8;
+    z-index: 9999;
+    border: 0;
+    font-size: 12px !important;
+    line-height: 1.42857143 !important;
+    letter-spacing: 4px;
+    border-radius: 0;
+}
+
+.navbar li a, .navbar .navbar-brand {
+    color: #000 !important;
+}
+
+.navbar-nav li a:hover, .navbar-nav li.active  {
+    color: white !important;
+
+   
+}
+.dropdown li a{
+	color: black;
+}
+.dropdown li a:hover{
+background-color: #53c68c;
+
+}
+
+.navbar-default .navbar-toggle {
+    border-color: transparent;
+    color: #fff !important;
+}
+
+
+.carousel-btn{
+	margin-bottom: 15px;
+	background-color: orange;
+	color: white;
+	border: 1px solid white;
+	border-radius: 8px;
+	opacity: 0.9;
+}
+
+.button: hover{
+	border: 10px solid red;
+}
+
+.carousel{
+margin-bottom: 30px;
+
+}
+
+.carousel-inner img {
+	margin: auto;
+	width: 100%;
+   
+
+}
+
+@media  screen and (min-width: 768px){
+	.carousel-inner{
+		width: 100%;
+		height: 600px !important;
+	}
+
+}
+
+
+.carousel-caption{
+    top: 50%;
+    transform: translateY(-50%);
+    bottom: initial;
+    -webkit-transform-style: preserve-3d;
+    -moz-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+}
+
+@media screen and (min-width: 800px){
+	.carousel-caption{
+    top: 25%;
+    transform: translateY(-25%);
+    bottom: initial;
+    -webkit-transform-style: preserve-3d;
+    -moz-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+}
+
+}
+
+hr{
+	border: 0;
+	border-top: 2px solid #53c68c;
+	background-color: #53c68c;
+	padding: 0;
+	width: 50%;
+	margin: auto;
+
+}
+
+hr.thin{
+	border: 0;
+	padding: 0;
+	border-top: 2px solid #dfdfdf;
+	background-color: #dfdfdf;
+	width: 100%;
+	margin: 0;
+
+}
+
+
+
+.logo{
+font-size: 40px;
+color: orange;
+border: 2px solid #53c68c;
+border-radius: 200px;
+padding: 20px;
+}
+
+.values{
+	margin: 30px;
+}
+
+.bg-image{
+background-image: url(images/why.jpeg);
+background-repeat: no-repeat;
+background-attachment: fixed;
+margin-top: 30px;
+background-position: center;
+background-size: cover;
+width: 100%;
+
+}
+
+
+
+.tip{
+	background-color: orange;
+	width: 40px;
+	height: auto;
+
+
+}
+
+.bg-image .row{
+margin-top: 50px; 
+}
+
+.bg-image p{
+	color: white;
+}
+
+.short-about{
+	color: black;
+	font-size: 20px;
+	line-height: 30px;
+	padding: 20px;
+	font-style: italic;
+	
+
+}
+
+.logo-big{
+font-size: 200px;
+color: orange;
+display: flex;
+align-items: center;
+}
+
+.logo-big-white{
+font-size: 200px;
+color: white;
+display: flex;
+align-items: center;
+}
+
+
+
+.short-aboute{
+	color: black;
+	font-size: 20px;
+	line-height: 30px;
+
+
+}
+.bg-grey {
+	margin-top: 10px;
+	color: #818181;
+	width: 70%;
+	margin: auto;
+
+}
+.bg-grey h3{
+	color: black;
+}
+
+.bg-green{
+color: white;
+	background-color: #53c68c;
+	border-radius: 20px;
+
+}
+
+h2{
+	line-height: 1.42857143 !important;
+    letter-spacing: 4px;
+}
+
+.label{
+	font-size: 50px;
+	border-radius: 200px;
+	font-weight: bolder;
+	
+	
+}
+
+.form-control {
+	transition: box-shadow 0.5s;
+	
+}
+
+.bg-trans{
+	 margin: 20px;
+	 font-size: 18px; 
+	 font-weight: bold;
+	 
+}
+
+.bg-black {
+	background-color: black;
+	color: white;
+	margin-top: 50px;
+}
+
+
+
+.carousel-control.right, .carousel-control.left {
+    background-image: none;
+    color: orange;
+}
+
+.carousel-indicators li {
+    border-color: orange;
+}
+
+.carousel-indicators li.active {
+    background-color: orange;
+}
+
+.item h4 {
+    font-size: 19px;
+    line-height: 1.375em;
+    font-weight: 400;
+    font-style: italic;
+    margin: 70px 0;
+}
+
+.item span {
+    font-style: normal;
+}
+
+footer{
+
+    padding: 20px;
+}
+
+footer p a{
+	color: white;
+}
+
+footer p a:hover{
+	text-decoration: none;
+	color: red;
+}
+
+.partner-logo{
+	width: 100px;
+	height: 50px;
+
+}
+
+@media screen and (max-width: 20px){
+	.yo{
+		display: flex;
+	}
+
+}
+
+.slideanim {visibility:hidden;}
+.slidee {
+    /* The name of the animation */
+    animation-name: slide;
+    -webkit-animation-name: slide; 
+    /* The duration of the animation */
+    animation-duration: 1s; 
+    -webkit-animation-duration: 1s;
+    /* Make the element visible */
+    visibility: visible; 
+}
+
+/* Go from 0% to 100% opacity (see-through) and specify the percentage from when to slide in the element along the Y-axis */
+@keyframes slide {
+    0% {
+        opacity: 0;
+        -webkit-transform: translateY(70%);
+    } 
+    100% {
+        opacity: 1;
+        -webkit-transform: translateY(0%);
+    } 
+}
+@-webkit-keyframes slide {
+    0% {
+        opacity: 0;
+        -webkit-transform: translateY(70%);
+    } 
+    100% {
+        opacity: 1;
+        -webkit-transform: translateY(0%);
+    }
+}
+
+.bg-bck-grey{
+	background-color: #dfdfdf;
+	padding: 20px 10px 80px 80px;
+}
+.v-center{
+	display: flex;
+	align-items: center;
+}
+
+@media screen and (max-width: 768px){
+	.row.v-center{
+		display: block;
+	}
+}
+
+.image-team{
+	width: 300px;
+	height: 300px;
+}
+
+.image-team-small{
+	width: 250px;
+	height: 250px;
+}
+
+.team-pos{
+	font-weight: bold;
+	margin-top: 20px;
+	color: #53c68c;
+}
+
+.team-pos-orange{
+	font-weight: bold;
+	margin-top: 20px;
+	color: white;
+}
+
+.team-desc-orange{
+	padding: 20px 10px 80px 80px;
+	background-color: orange;
+	color: black;
+	font-size: 15px;
+	line-height: 25px;
+
+}
+
+.team-desc-white{
+	padding: 20px 10px 80px 80px;
+	font-size: 15px;
+	line-height: 25px;
+}
+
+.bounce {
+  position: relative;
+  
+  
+  -webkit-animation:bounce 1s infinite;
+}
+
+@-webkit-keyframes bounce {
+  0%       { bottom:5px; }
+  25%, 75% { bottom:15px; }
+  50%      { bottom:20px; }
+  100%     {bottom:0;}
+}
+
+.confirm{
+	padding: 30px;
+	 background-color: orange;
+	   border-radius: 15px; 
+	   display: none;
+}
+.list-group a:hover{
+	background-color: orange;
+	color: white;
+}
+
+.donate {
+	background-image: url(images/children-save.jpg);
+	height: 500px;
+	background-size: contain;
+	background-attachment: fixed;
+	
+
+	
+}
+
+a:hover{
+text-decoration: none;
+color: #53c68c;
+}
+
+.blog-btn:hover{
+	background-color: black;
+}
+
+.fa {
+  padding: 20px;
+  font-size: 30px;
+  width: 30px;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 50%;
+  color: white;
+}
+
+
+.btn:focus, .btn:active, button:focus, button:active {
+  outline: none !important;
+  box-shadow: none !important;
+}
+
+#image-gallery .modal-footer{
+  display: block;
+}
+
+.thumb{
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+
+@media screen and (max-width: 200px){
+	.leaderboard{
+		  visibility: hidden;
+	}
+}
+
+
+
