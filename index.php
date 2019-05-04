@@ -1,13 +1,6 @@
 <?php 
-include 'https://klci.com.ng/header.php';?>
-
-<div class="container">
-  <div class="row" style="margin-top:20px; margin-bottom: 20px">
-    <a onclick="location.href=\'https://klci.com.ng\'"><img class="img-responsive img-rounded"
-        src="https://klci.com.ng/images/klci.png" alt="KLCI" style="width:100px;"></a>
-  </div>
-</div>
-<?php include "https://klci.com.ng/navbar.php"; ?>
+include 'header.php';
+ include "navbar.php"; ?>
 
 <body id="home" data-spy="scroll" data-target=".navbar" data-offset="60">
   <!-- CAROUSEL -->
@@ -319,7 +312,7 @@ include 'https://klci.com.ng/header.php';?>
     <hr class="thin">
   </div>
   <?php
-include  include "https://klci.com.ng/footer.php"; ;
+include  'footer.php"; 
 ?>
 
   </div>
