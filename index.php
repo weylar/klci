@@ -312,7 +312,7 @@ include 'header.php';
     <hr class="thin">
   </div>
   <?php
-include  'footer.php"; 
+include  "footer.php"; 
 ?>
 
   </div>

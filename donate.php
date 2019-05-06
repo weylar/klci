@@ -1,6 +1,6 @@
 <?php
-include 'https://klci.com.ng/header.php';
-include "https://klci.com.ng/navbar.php"; ?>
+include 'header.php';
+include "navbar.php"; ?>
 <div class="container-fluid team-desc-orange" style="padding-top: 70px">
   <div class="row v-center">
     <div class="col-md-8">
@@ -33,12 +33,83 @@ include "https://klci.com.ng/navbar.php"; ?>
   <div class="text-center" style="margin-top: 200px;">
     <h2 class="slideanim" style="color: white;"><strong>You too can contribute, donate today!</strong></h2>
     <br>
-    <button class="btn btn-lg carousel-btn  bounce"><span class="glyphicon glyphicon-lock"></span> Donate</button>
+    <a href="#donate" class="btn btn-lg carousel-btn"> Donate</a>
   </div>
 </div>
 
+<!-- Donate Segment -->
+<div id="donate">
+  <h2 class="text-center">Our Account Details</h2>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6">
+      <h4>Kindly find below our accounts details
+        </h4>
+        <br>
+        <ul class="list-group">
+          <li class="list-group-item">
+            <h4>Account Name: <strong>Kayode Alabi Leadership And Career</strong></h4>
+          </li>
+          <li class="list-group-item">
+            <h4>Account Number: <strong>1016248804</strong></h4>
+          </li>
+          <li class="list-group-item">
+            <h4>Bank Name: <strong>Zenith Bank</strong></h4>
+          </li>
+        </ul>
+      </div>
+      <div class="col-md-6" >
+        <div>
+        <h4>To help you know where your donation went to kindly provide the following details for future correspondence
+        </h4>
+        <br>
+        <form action="donate.php#donate" role="form" method="post">
+          <div class="form-group">
+            <label for="name">Name:</label>
+            <input type="text" name="name" id="name" class="form-control" required>
+          </div>
+          <div class="form-group">
+              <label for="email">Email:</label>
+          <input type="email" name="email" class="form-control" id="email" required>
+          </div>
+          <div class="form-group">
+              <label for="phone">Phone Number:</label>
+          <input type="number" name="phone" class="form-control" id="phone" required>
+          </div>
+          <button type="submit" class="btn btn-lg carousel-btn"">Submit</button>
+        </form>
+      </div>
+      <?php 
+      // Checks if message ws submitted
+if (isset($_POST['name'])) {
+  echo '<div class="alert alert-success">
+  <h4 id="details-success">Thank you for joining us restore the educational promise and librate the children in the under-served
+  communities.</h4></div>';
+}
+      ?>
+        
+      </div>
+    </div>
+
+  </div>
+
+</div>
+<!-- End of donate segment -->
+
 <?php
-include "https://klci.com.ng/footer.php";  ?>
+
+// Scripts to perform submition 
+if(isset($POST['name'])){
+  $name = $_POST['name'];
+}
+if(isset($POST['email'])){
+  $email = $_POST['email'];
+}
+if(isset($POST['phone'])){
+  $phone = $_POST['phone'];
+}
+
+include "footer.php";  ?>
 </body>
 
 </html>

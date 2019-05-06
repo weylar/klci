@@ -15,12 +15,12 @@ $sql = "SELECT * FROM gallery ORDER BY id DESC";
   $result = $conn->query($sql);
  
   ?>
-  
+
 
 <html>
 
 <head>
-    <title>Admin</title>
+    <title>Admin | Gallery</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
@@ -61,11 +61,11 @@ include 'sidebar.php';
 ?>
 
 
-<div class="container" style="margin-top: 100px;">
+    <div class="container" style="margin-top: 100px;">
         <div class="row">
             <div class="col-md-8">
-             
-            <?php
+
+                <?php
             
     if ($result->num_rows > 0) {
  
@@ -98,40 +98,30 @@ include 'sidebar.php';
     
        if ($conn->query($sql) === TRUE) {
     echo ('Post deleted successfully, please referesh page');
-        header('Location: '.$_SERVER['REQUEST_URI']);
-   
-
-   
-
+       
 } else {
 
     echo ('Error deleting post: (if you don\'t understand the problem, you can refer to the developer)' . $conn->error);
 }
-    
-   
+     
   }
-  
-  
    if (isset($_GET['delete'])) {
     deleteImage($_GET['delete']);
-
-       
    }
-
     ?>
-    </div>
-    <div class="col-md-2">
-            <form action="gallery-upload.php" method='POST' accept-charset='UTF-8' enctype='multipart/form-data'>
-                <h4>New Image</h4>
-                <input type="text" class="form-control" name="title" placeholder="Image Title" required>
-                <br>
-                <input type="file"  name="gallery" accept="image/*" class="form-control"required>
-                <br>
-                <input type="submit" value="Post" class="btn btn-primary">
-            </form>
             </div>
+            <div class="col-md-2">
+                <form action="gallery-upload.php" method='POST' accept-charset='UTF-8' enctype='multipart/form-data'>
+                    <h4>New Image</h4>
+                    <input type="text" class="form-control" name="title" placeholder="Image Title" required>
+                    <br>
+                    <input type="file" name="gallery" accept="image/*" class="form-control" required>
+                    <br>
+                    <input type="submit" value="Post" class="btn btn-primary">
+                </form>
             </div>
-            
+        </div>
+
 
         <div class="modal fade" id="image-gallery" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
             aria-hidden="true">
@@ -159,100 +149,100 @@ include 'sidebar.php';
             </div>
         </div>
     </div>
-</div>
-<?php
+    </div>
+    <?php
  
 include "footer.php"; 
 ?>
-<script>
-    let modalId = $('#image-gallery');
-    $(document)
-        .ready(function () {
-            loadGallery(true, 'a.thumbnail');
+    <script>
+        let modalId = $('#image-gallery');
+        $(document)
+            .ready(function () {
+                loadGallery(true, 'a.thumbnail');
 
-            //This function disables buttons when needed
-            function disableButtons(counter_max, counter_current) {
-                $('#show-previous-image, #show-next-image')
-                    .show();
-                if (counter_max === counter_current) {
-                    $('#show-next-image')
-                        .hide();
-                } else if (counter_current === 1) {
-                    $('#show-previous-image')
-                        .hide();
-                }
-            }
-
-            /**
-             *
-             * @param setIDs        Sets IDs when DOM is loaded. If using a PHP counter, set to false.
-             * @param setClickAttr  Sets the attribute for the click handler.
-             */
-
-            function loadGallery(setIDs, setClickAttr) {
-                let current_image,
-                    selector,
-                    counter = 0;
-
-                $('#show-next-image, #show-previous-image')
-                    .click(function () {
-                        if ($(this)
-                            .attr('id') === 'show-previous-image') {
-                            current_image--;
-                        } else {
-                            current_image++;
-                        }
-
-                        selector = $('[data-image-id="' + current_image + '"]');
-                        updateGallery(selector);
-                    });
-
-                function updateGallery(selector) {
-                    let $sel = selector;
-                    current_image = $sel.data('image-id');
-                    $('#image-gallery-title')
-                        .text($sel.data('title'));
-                    $('#image-gallery-image')
-                        .attr('src', $sel.data('image'));
-                    disableButtons(counter, $sel.data('image-id'));
+                //This function disables buttons when needed
+                function disableButtons(counter_max, counter_current) {
+                    $('#show-previous-image, #show-next-image')
+                        .show();
+                    if (counter_max === counter_current) {
+                        $('#show-next-image')
+                            .hide();
+                    } else if (counter_current === 1) {
+                        $('#show-previous-image')
+                            .hide();
+                    }
                 }
 
-                if (setIDs == true) {
-                    $('[data-image-id]')
-                        .each(function () {
-                            counter++;
-                            $(this)
-                                .attr('data-image-id', counter);
+                /**
+                 *
+                 * @param setIDs        Sets IDs when DOM is loaded. If using a PHP counter, set to false.
+                 * @param setClickAttr  Sets the attribute for the click handler.
+                 */
+
+                function loadGallery(setIDs, setClickAttr) {
+                    let current_image,
+                        selector,
+                        counter = 0;
+
+                    $('#show-next-image, #show-previous-image')
+                        .click(function () {
+                            if ($(this)
+                                .attr('id') === 'show-previous-image') {
+                                current_image--;
+                            } else {
+                                current_image++;
+                            }
+
+                            selector = $('[data-image-id="' + current_image + '"]');
+                            updateGallery(selector);
+                        });
+
+                    function updateGallery(selector) {
+                        let $sel = selector;
+                        current_image = $sel.data('image-id');
+                        $('#image-gallery-title')
+                            .text($sel.data('title'));
+                        $('#image-gallery-image')
+                            .attr('src', $sel.data('image'));
+                        disableButtons(counter, $sel.data('image-id'));
+                    }
+
+                    if (setIDs == true) {
+                        $('[data-image-id]')
+                            .each(function () {
+                                counter++;
+                                $(this)
+                                    .attr('data-image-id', counter);
+                            });
+                    }
+                    $(setClickAttr)
+                        .on('click', function () {
+                            updateGallery($(this));
                         });
                 }
-                $(setClickAttr)
-                    .on('click', function () {
-                        updateGallery($(this));
-                    });
-            }
-        });
+            });
 
-    // build key actions
-    $(document)
-        .keydown(function (e) {
-            switch (e.which) {
-                case 37: // left
-                    if ((modalId.data('bs.modal') || {})._isShown && $('#show-previous-image').is(":visible")) {
-                        $('#show-previous-image')
-                            .click();
-                    }
-                    break;
+        // build key actions
+        $(document)
+            .keydown(function (e) {
+                switch (e.which) {
+                    case 37: // left
+                        if ((modalId.data('bs.modal') || {})._isShown && $('#show-previous-image').is(":visible")) {
+                            $('#show-previous-image')
+                                .click();
+                        }
+                        break;
 
-                case 39: // right
-                    if ((modalId.data('bs.modal') || {})._isShown && $('#show-next-image').is(":visible")) {
-                        $('#show-next-image')
-                            .click();
-                    }
-                    break;
+                    case 39: // right
+                        if ((modalId.data('bs.modal') || {})._isShown && $('#show-next-image').is(":visible")) {
+                            $('#show-next-image')
+                                .click();
+                        }
+                        break;
 
-                default:
-                    return; // exit this handler for other keys
-            }
-            e.preventDefault(); // prevent the default action (scroll / move caret)
-        });
-</script>
+                    default:
+                        return; // exit this handler for other keys
+                }
+                e.preventDefault(); // prevent the default action (scroll / move caret)
+            });
+    </script>

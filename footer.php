@@ -1,7 +1,6 @@
 <footer class="container-fluid text-center " style="background-color: black;
   color: white;">
-  <a class="up-arrow bounce" href='#home' data-toggle="tooltip" title="To top">
-    <span class="glyphicon glyphicon-chevron-up" style="color: orange"></span>
+  
   </a><br>
   <div class="row v-center">
     <div id="contact" class="col-md-6 text-left">
