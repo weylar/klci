@@ -1,6 +1,6 @@
 <?php
-include 'https://klci.com.ng/header.php';
-include "https://klci.com.ng/navbar.php";
+include 'header.php';
+include "navbar.php";
 ?>
 
 <!-- CAROUSEL -->
@@ -263,7 +263,7 @@ include "https://klci.com.ng/navbar.php";
    </div>
 </div>
 
-<?php include  'https://klci.com.ng/footer.php'; ?>
+<?php include  'footer.php'; ?>
 
 </body>
 

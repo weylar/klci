@@ -36,11 +36,11 @@
     </div>
     <div class="col-md-6 text-left">
       <h3>Our Partners</h3>
-      <img src="images/softacle.jpg" alt="softacles.com" class="partner-logo">
-      <img src="images/grace.jpg" alt="grace.com" class=" partner-logo">
-      <img src="images/farmignite.jpg" alt="farmignite.com" class=" partner-logo">
-      <img src="images/lawaccent.jpg" alt="lawaccent.com" class=" partner-logo">
-      <img src="images/waterstone.jpg" alt="waterstone.com" class="partner-logo">
+      <img src="https://klci.com.ng/images/softacle.jpg" alt="softacles.com" class="partner-logo">
+      <img src="https://klci.com.ng/images/grace.jpg" alt="grace.com" class=" partner-logo">
+      <img src="https://klci.com.ng/images/farmignite.jpg" alt="farmignite.com" class=" partner-logo">
+      <img src="https://klci.com.ng/images/lawaccent.jpg" alt="lawaccent.com" class=" partner-logo">
+      <img src="https://klci.com.ng/images/waterstone.jpg" alt="waterstone.com" class="partner-logo">
       <br><br>
     </div>
   </div>

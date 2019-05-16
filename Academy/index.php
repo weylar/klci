@@ -14,7 +14,7 @@ include "../navbar.php"; ?>
   <div class="row v-center">
     <div class="col-md-8">
       <h2 class="text-center">Need for courses</h2>
-      <h4 style="color: black; line-height: 25px;">70% percent of people in their current job aren\'t happy because they
+      <h4 style="color: black; line-height: 25px;">70% percent of people in their current job aren't happy because they
         had no access to tools that would help them navigate their career. Others who are happy may not have the skills
         to further develop in their career.
 

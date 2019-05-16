@@ -1,6 +1,6 @@
 <?php
-include "https://klci.com.ng/header.php"; 
-include "https://klci.com.ng/navbar.php"; ?>
+include "header.php"; 
+include "navbar.php"; ?>
 <div>
 	<div id="myCarousel" class="carousel slide" data-ride="carousel">
 
@@ -261,7 +261,7 @@ include "https://klci.com.ng/navbar.php"; ?>
 	</div>
 
 	<?php
-include "https://klci.com.ng/footer.php"; ;
+include "footer.php"; ;
 ?>
 
 	<script type="text/javascript">

@@ -213,7 +213,7 @@ include 'header.php';
         <h2 class="text-center"><strong>Connect Us</strong></h2>
         <h4>You too can connect us to a school in an underserved community (Rural or Urban) that needs access to skills
           and opportunities</h4>
-        <a type="button" href="https://klci.com.ng/connect.php'" style="margin-top: 25px; width:100%"
+        <a type="button" href="https://klci.com.ng/connect.php" style="margin-top: 25px; width:100%"
           class="btn  btn-lg  carousel-btn">Connect us</a>
       </div>
     </div>
@@ -330,8 +330,8 @@ include  "footer.php";
   <!--End of Tawk.to Script-->
 </body>
 
-</html>'
-?>
+</html>
+
 
 <script>
   $(function () {

@@ -42,9 +42,9 @@ Please note that you are to make payment of <b>N2000 ($6)</b> to take this cours
 This is in a bid to develop yourself and indirectly enable
 children in underdeserved communities access quality education.<br><br><br>
 Find the payment details below:<br><br>
-   Account Name: <strong> Alabi Hammed Kayode</strong><br>
-   Account Number: <strong> 0121551088 </strong><br>
-   Bank: <strong>Guaranty Trust Bank</strong><br><br>
+   Account Name: <strong> Kayode Alabi Leadership And Career</strong><br>
+   Account Number: <strong> 1016248804 </strong><br>
+   Bank: <strong>Zenith Bank</strong><br><br>
    <b>N.B</b>: Kindly respond to this mail with evidence of payment and a congratulatory mail will follow and a link to join class.
    <br><br>
    The KLCI Academy since inception have trained over 100 young professionals. This is a great oppurtunity to tap into the network of youmg Nigerians and Africans doing amazing stuffs.<br><br>

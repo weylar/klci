@@ -4,6 +4,7 @@
 <head>
     <title>Kayode Alabi Leadership And Career Initiative</title>
     <meta charset="utf-8">
+    <meta name="author" content="Hammed Kayode Alabi">
     <meta name="keywords"
         content="klci, kayode, underserved, alabi, education, global citizenship, leadership, marginalized, sustainable development,
 	mentorship, advocacy, inequality, quality education, character training, career development, entrepreneurship, secondary school, scholarship ">

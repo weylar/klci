@@ -1,6 +1,6 @@
 <?php
-include "https://klci.com.ng/header.php"; 
-include "https://klci.com.ng/navbar.php"; 
+include "header.php"; 
+include "navbar.php"; 
 
 if (isset($_GET['result'])) {
 
@@ -216,7 +216,7 @@ Our mission is to reduce inequalities by helping underserved young people to dev
 }
 
 
-include "https://klci.com.ng/footer.php"; ?>
+include "footer.php"; ?>
 
 <script type="text/javascript">
   var Tawk_API = Tawk_API || {}, Tawk_LoadStart = new Date();

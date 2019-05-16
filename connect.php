@@ -1,6 +1,6 @@
 <?php
-include 'https://klci.com.ng/header.php';
-include "https://klci.com.ng/navbar.php";
+include 'header.php';
+include "navbar.php";
 
 if (isset($_GET['result'])) {
 
@@ -74,6 +74,6 @@ echo '<div class="container jumbotron" style="margin-top: 70px; padding: 30px">
 }
 
 
-include 'https://klci.com.ng/footer.php';
+include 'footer.php';
 echo '</body>
 </html>';

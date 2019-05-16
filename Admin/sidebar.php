@@ -36,6 +36,10 @@
                 <li><a href="message.php"><span class="glyphicon glyphicon-comment"
                             style="padding-right: 5px"></span>Direct Messages</a></li>
 
+                <!-- Donation Messages -->
+                <li><a href="donation.php"><span class="glyphicon glyphicon-usd"
+                            style="padding-right: 5px"></span>Donations</a></li>
+
 
             </ul>
         </div>

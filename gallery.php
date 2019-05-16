@@ -1,189 +1,43 @@
+
 <?php
-include 'https://klci.com.ng/header.php';
-include "https://klci.com.ng/navbar.php"; 
+include 'header.php';
+include "navbar.php"; 
+
+$servername = "localhost";
+$username = "klcicomn_admin";
+$password = "";
+$dbname = "klcicomn_blog";
+
+// Create connection
+$conn = new mysqli($servername, $username, $password, $dbname);
+// Check connection
+if ($conn->connect_error) {
+    die("Connection failed: " . $conn->connect_error);
+} 
+
+$sql = "SELECT * FROM gallery ORDER BY id DESC";
+  $result = $conn->query($sql);
+ 
+  
 ?>
-
-
 
 <div class="container" style="margin-top: 20px;">
     <h4 class="text-center" style="margin-bottom: 50px;">Welcome to our gallery section where you get too see all our
         picture stories from our Projects and Outreaches beacause we believe picture speaks better than words</h4>
 
     <div class="row">
-        <div class="row">
-            <div class="col-lg-3 col-md-4 col-xs-6 thumb">
-                <a class="thumbnail" href="#" data-image-id="" data-toggle="modal" data-title="Skill2Bootcamp"
-                    data-image="https://klci.com.ng/images/skill/sk (1).jpg" data-target="#image-gallery">
-                    <img class="img-thumbnail" src="https://klci.com.ng/images/skill/sk (1).jpg">
+        <?php
+        if ($result->num_rows > 0) {
+    while($row = $result->fetch_assoc()) {
+          echo  "<div class='col-lg-3 col-md-4 col-xs-6 thumb' style='margin-bottom:10px;'>
+                <a class='thumbnail'href='#' data-image-id='' data-toggle='modal'data-title='$row[title]'
+                    data-image='$row[image_url]' data-target='#image-gallery'>
+                    <img class='img-thumbnail' src='$row[image_url]' alt='$row[image_url]'>
                 </a>
-            </div>
-
-            <div class="col-lg-3 col-md-4 col-xs-6 thumb">
-                <a class="thumbnail" href="#" data-image-id="" data-toggle="modal" data-title="Project LECT"
-                    data-image="https://klci.com.ng/images/lect1.jpg" data-target="#image-gallery">
-                    <img class="img-thumbnail" src="https://klci.com.ng/images/lect1.jpg">
-                </a>
-            </div>
-            <div class="col-lg-3 col-md-4 col-xs-6 thumb">
-                <a class="thumbnail" href="#" data-image-id="" data-toggle="modal" data-title="Skill2Bootcamp"
-                    data-image="https://klci.com.ng/images/skill/DSC_1019.jpg" data-target="#image-gallery">
-                    <img class="img-thumbnail" src="https://klci.com.ng/images/skill/DSC_1019.jpg">
-                </a>
-            </div>
-            <div class="col-lg-3 col-md-4 col-xs-6 thumb">
-                <a class="thumbnail" href="#" data-image-id="" data-toggle="modal" data-title="Project LECT"
-                    data-image="https://klci.com.ng/images/lect2.jpg" data-target="#image-gallery">
-                    <img class="img-thumbnail" src="https://klci.com.ng/images/lect2.jpg">
-                </a>
-            </div>
-            <div class="col-lg-3 col-md-4 col-xs-6 thumb">
-                <a class="thumbnail" href="#" data-image-id="" data-toggle="modal" data-title="Skill2Bootcamp"
-                    data-image="https://klci.com.ng/images/skill/DSC_1022.jpg" data-target="#image-gallery">
-                    <img class="img-thumbnail" src="https://klci.com.ng/images/skill/DSC_1022.jpg">
-                </a>
-            </div>
-            <div class="col-lg-3 col-md-4 col-xs-6 thumb">
-                <a class="thumbnail" href="#" data-image-id="" data-toggle="modal" data-title="Project LECT"
-                    data-image="https://klci.com.ng/images/lect3.jpg" data-target="#image-gallery">
-                    <img class="img-thumbnail" src="https://klci.com.ng/images/lect3.jpg">
-                </a>
-            </div>
-            <div class="col-lg-3 col-md-4 col-xs-6 thumb">
-                <a class="thumbnail" href="#" data-image-id="" data-toggle="modal" data-title="Skill2Bootcamp"
-                    data-image="https://klci.com.ng/images/skill/sk (2).jpg" data-target="#image-gallery">
-                    <img class="img-thumbnail" src="https://klci.com.ng/images/skill/sk (2).jpg">
-
-                </a>
-            </div>
-            <div class="col-lg-3 col-md-4 col-xs-6 thumb">
-                <a class="thumbnail" href="#" data-image-id="" data-toggle="modal" data-title="Project LECT"
-                    data-image="https://klci.com.ng/images/lect4.jpg" data-target="#image-gallery">
-                    <img class="img-thumbnail" src="https://klci.com.ng/images/lect4.jpg">
-                </a>
-            </div>
-
-            <div class="col-lg-3 col-md-4 col-xs-6 thumb">
-                <a class="thumbnail" href="#" data-image-id="" data-toggle="modal" data-title="Skill2Bootcamp"
-                    data-image="https://klci.com.ng/images/skill/DSC_1027.jpg" data-target="#image-gallery">
-                    <img class="img-thumbnail" src="https://klci.com.ng/images/skill/DSC_1027.jpg">
-                </a>
-            </div>
-            <div class="col-lg-3 col-md-4 col-xs-6 thumb">
-                <a class="thumbnail" href="#" data-image-id="" data-toggle="modal" data-title="Project LECT"
-                    data-image="https://klci.com.ng/images/lect5.jpg" data-target="#image-gallery">
-                    <img class="img-thumbnail" src="https://klci.com.ng/images/lect5.jpg">
-                </a>
-            </div>
-            <div class="col-lg-3 col-md-4 col-xs-6 thumb">
-                <a class="thumbnail" href="#" data-image-id="" data-toggle="modal" data-title="Skill2Bootcamp"
-                    data-image="https://klci.com.ng/images/skill/sk (3).jpg" data-target="#image-gallery">
-                    <img class="img-thumbnail" src="https://klci.com.ng/images/skill/sk (3).jpg">
-                </a>
-            </div>
-            <div class="col-lg-3 col-md-4 col-xs-6 thumb">
-                <a class="thumbnail" href="#" data-image-id="" data-toggle="modal" data-title="Skill2Bootcamp"
-                    data-image="https://klci.com.ng/images/skill/DSC_1038.jpg" data-target="#image-gallery">
-                    <img class="img-thumbnail" src="https://klci.com.ng/images/skill/DSC_1038.jpg">
-                </a>
-            </div>
-
-            <div class="col-lg-3 col-md-4 col-xs-6 thumb">
-                <a class="thumbnail" href="#" data-image-id="" data-toggle="modal" data-title="Skill2Bootcamp"
-                    data-image="https://klci.com.ng/images/skill/DSC_1040.jpg" data-target="#image-gallery">
-                    <img class="img-thumbnail" src="https://klci.com.ng/images/skill/DSC_1040.jpg">
-                </a>
-            </div>
-            <div class="col-lg-3 col-md-4 col-xs-6 thumb">
-                <a class="thumbnail" href="#" data-image-id="" data-toggle="modal" data-title="Skill2Bootcamp"
-                    data-image="https://klci.com.ng/images/skill/sk (4).jpg" data-target="#image-gallery">
-                    <img class="img-thumbnail" src="https://klci.com.ng/images/skill/sk (4).jpg">
-                </a>
-            </div>
-            <div class="col-lg-3 col-md-4 col-xs-6 thumb">
-                <a class="thumbnail" href="#" data-image-id="" data-toggle="modal" data-title="Skill2Bootcamp"
-                    data-image="https://klci.com.ng/images/skill/sk (5).jpg" data-target="#image-gallery">
-                    <img class="img-thumbnail" src="https://klci.com.ng/images/skill/sk (5).jpg">
-                </a>
-            </div>
-
-            <div class="col-lg-3 col-md-4 col-xs-6 thumb">
-                <a class="thumbnail" href="#" data-image-id="" data-toggle="modal" data-title="Skill2Bootcamp"
-                    data-image="https://klci.com.ng/images/skill/DSC_1047.jpg" data-target="#image-gallery">
-                    <img class="img-thumbnail" src="https://klci.com.ng/images/skill/DSC_1047.jpg">
-                </a>
-            </div>
-            <div class="col-lg-3 col-md-4 col-xs-6 thumb">
-                <a class="thumbnail" href="#" data-image-id="" data-toggle="modal" data-title="Skill2Bootcamp"
-                    data-image="https://klci.com.ng/images/skill/sk (6).jpg" data-target="#image-gallery">
-                    <img class="img-thumbnail" src="https://klci.com.ng/images/skill/sk (6).jpg">
-                </a>
-            </div>
-            <div class="col-lg-3 col-md-4 col-xs-6 thumb">
-                <a class="thumbnail" href="#" data-image-id="" data-toggle="modal" data-title="Skill2Bootcamp"
-                    data-image="https://klci.com.ng/images/skill/sk (7).jpg" data-target="#image-gallery">
-                    <img class="img-thumbnail" src="https://klci.com.ng/images/skill/sk (7).jpg">
-                </a>
-            </div>
-            <div class="col-lg-3 col-md-4 col-xs-6 thumb">
-                <a class="thumbnail" href="#" data-image-id="" data-toggle="modal" data-title="Skill2Bootcamp"
-                    data-image="https://klci.com.ng/images/skill/sk (8).jpg" data-target="#image-gallery">
-                    <img class="img-thumbnail" src="https://klci.com.ng/images/skill/sk (8).jpg">
-                </a>
-            </div>
-            <div class="col-lg-3 col-md-4 col-xs-6 thumb">
-                <a class="thumbnail" href="#" data-image-id="" data-toggle="modal" data-title="Skill2Bootcamp"
-                    data-image="https://klci.com.ng/images/skill/sk (9).jpg" data-target="#image-gallery">
-                    <img class="img-thumbnail" src="https://klci.com.ng/images/skill/sk (9).jpg">
-                </a>
-            </div>
-            <div class="col-lg-3 col-md-4 col-xs-6 thumb">
-                <a class="thumbnail" href="#" data-image-id="" data-toggle="modal" data-title="Skill2Bootcamp"
-                    data-image="https://klci.com.ng/images/skill/sk (10).jpg" data-target="#image-gallery">
-                    <img class="img-thumbnail" src="https://klci.com.ng/images/skill/sk (10).jpg">
-                </a>
-            </div>
-            <div class="col-lg-3 col-md-4 col-xs-6 thumb">
-                <a class="thumbnail" href="#" data-image-id="" data-toggle="modal" data-title="Skill2Bootcamp"
-                    data-image="https://klci.com.ng/images/skill/sk (11).jpg" data-target="#image-gallery">
-                    <img class="img-thumbnail" src="https://klci.com.ng/images/skill/sk (11).jpg">
-                </a>
-            </div>
-            <div class="col-lg-3 col-md-4 col-xs-6 thumb">
-                <a class="thumbnail" href="#" data-image-id="" data-toggle="modal" data-title="Project LECT"
-                    data-image="https://klci.com.ng/images/lect6.jpg" data-target="#image-gallery">
-                    <img class="img-thumbnail" src="https://klci.com.ng/images/lect6.jpg">
-                </a>
-            </div>
-            <div class="col-lg-3 col-md-4 col-xs-6 thumb">
-                <a class="thumbnail" href="#" data-image-id="" data-toggle="modal" data-title="Project LECT"
-                    data-image="https://klci.com.ng/images/lect7.jpg" data-target="#image-gallery">
-                    <img class="img-thumbnail" src="https://klci.com.ng/images/lect7.jpg">
-                </a>
-            </div>
-            <div class="col-lg-3 col-md-4 col-xs-6 thumb">
-                <a class="thumbnail" href="#" data-image-id="" data-toggle="modal" data-title="Project LECT"
-                    data-image="https://klci.com.ng/images/lect8.jpg" data-target="#image-gallery">
-                    <img class="img-thumbnail" src="https://klci.com.ng/images/lect8.jpg">
-                </a>
-            </div>
-            <div class="col-lg-3 col-md-4 col-xs-6 thumb">
-                <a class="thumbnail" href="#" data-image-id="" data-toggle="modal" data-title="Project LECT"
-                    data-image="https://klci.com.ng/images/lect9.jpg" data-target="#image-gallery">
-                    <img class="img-thumbnail" src="https://klci.com.ng/images/lect9.jpg">
-                </a>
-            </div>
-            <div class="col-lg-3 col-md-4 col-xs-6 thumb">
-                <a class="thumbnail" href="#" data-image-id="" data-toggle="modal" data-title="Project LECT"
-                    data-image="https://klci.com.ng/images/lect10.jpg" data-target="#image-gallery">
-                    <img class="img-thumbnail" src="https://klci.com.ng/images/lect10.jpg">
-                </a>
-            </div>
-            <div class="col-lg-3 col-md-4 col-xs-6 thumb">
-                <a class="thumbnail" href="#" data-image-id="" data-toggle="modal" data-title="Project LECT"
-                    data-image="https://klci.com.ng/images/lect11.jpg" data-target="#image-gallery">
-                    <img class="img-thumbnail" src="https://klci.com.ng/images/lect11.jpg">
-                </a>
-            </div>
+            </div>";
+            }
+          } 
+          ?>
         </div>
         <div class="modal fade" id="image-gallery" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
             aria-hidden="true">
@@ -213,7 +67,7 @@ include "https://klci.com.ng/navbar.php";
     </div>
 </div>
 <?php
-include "https://klci.com.ng/footer.php"; ;
+include "footer.php"; 
 ?>
 <script>
     let modalId = $('#image-gallery');

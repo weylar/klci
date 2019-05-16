@@ -1,4 +1,33 @@
 <?php
+/* ============================================================================================================== */
+/* Email logic  */
+
+  $email = $_POST['email'];
+  $name = $_POST['name'];
+  $phone = $_POST['phone'];
+  $to = "contact@klci.com.ng";
+  $subject = "New email (Donation)";
+  $headers = "From: $email\n";
+  $message = "Name: $name\nEmail: $email\nPhone: $phone";
+  mail($to, $subject, $message, $headers);
+  /* ============================================================================= */
+  /* Database Logic */
+  $servername = "localhost";
+  $username = "klcicomn_admin";
+  $password = "3RnPnuRxFdzh";
+  $dbname = "klcicomn_blog";
+
+  // Create connection
+  $conn = new mysqli($servername, $username, $password, $dbname);
+  // Check connection
+  if ($conn->connect_error) {
+    die("Connection failed: " . $conn->connect_error);
+  
+
+  $sql = "INSERT INTO donation (email, name, phone) VALUES ('$email', '$name', '$phone' )";
+
+  $conn->query($sql);
+
 include 'header.php';
 include "navbar.php"; ?>
 <div class="container-fluid team-desc-orange" style="padding-top: 70px">
@@ -6,7 +35,7 @@ include "navbar.php"; ?>
     <div class="col-md-8">
       <h2 class="text-center"><strong>Support A Child Today</strong></h2>
       <p class="short-aboute">Everyday nearly 400,000 babies are born around the world. Life starting point is a
-        lottery, but the future needn\'t be left to chance (World Bank 2018).
+        lottery, but their future should not be left to chance (World Bank 2018).
         The career of so many children born in marginalized communities has remained stunted because of the financial
         status of the parents. Many times, parents try so hard to send their
         kids to school but many of those kids could not complete primary or secondary school. In most cases they do not
@@ -43,7 +72,7 @@ include "navbar.php"; ?>
   <div class="container">
     <div class="row">
       <div class="col-md-6">
-      <h4>Kindly find below our accounts details
+        <h4>Kindly find below our accounts details
         </h4>
         <br>
         <ul class="list-group">
@@ -58,34 +87,34 @@ include "navbar.php"; ?>
           </li>
         </ul>
       </div>
-      <div class="col-md-6" >
+      <div class="col-md-6">
         <div>
-        <h4>To help you know where your donation went to kindly provide the following details for future correspondence
-        </h4>
-        <br>
-        <form action="donate.php#donate" role="form" method="post">
-          <div class="form-group">
-            <label for="name">Name:</label>
-            <input type="text" name="name" id="name" class="form-control" required>
-          </div>
-          <div class="form-group">
+          <h4>To help you know where your donation went to kindly provide the following details for future correspondence
+          </h4>
+          <br>
+          <form action="donate.php#donate" role="form" method="post">
+            <div class="form-group">
+              <label for="name">Name:</label>
+              <input type="text" name="name" id="name" class="form-control" required>
+            </div>
+            <div class="form-group">
               <label for="email">Email:</label>
-          <input type="email" name="email" class="form-control" id="email" required>
-          </div>
-          <div class="form-group">
+              <input type="email" name="email" class="form-control" id="email" required>
+            </div>
+            <div class="form-group">
               <label for="phone">Phone Number:</label>
-          <input type="number" name="phone" class="form-control" id="phone" required>
-          </div>
-          <button type="submit" class="btn btn-lg carousel-btn"">Submit</button>
+              <input type="number" name="phone" class="form-control" id="phone" required>
+            </div>
+            <button type="submit" class="btn btn-lg carousel-btn"">Submit</button>
         </form>
       </div>
-      <?php 
+      <?php
       // Checks if message ws submitted
-if (isset($_POST['name'])) {
-  echo '<div class="alert alert-success">
+      if (isset($_POST['name'])) {
+        echo '<div class="alert alert-success">
   <h4 id="details-success">Thank you for joining us restore the educational promise and librate the children in the under-served
   communities.</h4></div>';
-}
+      }
       ?>
         
       </div>
@@ -99,13 +128,13 @@ if (isset($_POST['name'])) {
 <?php
 
 // Scripts to perform submition 
-if(isset($POST['name'])){
+if (isset($POST['name'])) {
   $name = $_POST['name'];
 }
-if(isset($POST['email'])){
+if (isset($POST['email'])) {
   $email = $_POST['email'];
 }
-if(isset($POST['phone'])){
+if (isset($POST['phone'])) {
   $phone = $_POST['phone'];
 }
 

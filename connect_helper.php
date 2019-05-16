@@ -1,6 +1,8 @@
+
 <?php
 $email = $_POST['email'];
 $name = $_POST['name'];
+$contact = $_POST['contact'];
 $phone = $_POST['number'];
 $school = $_POST['school'];
 $location = $_POST['location'];
@@ -14,6 +16,23 @@ Phone: $phone\n
 School: $school\n
 Location: $location\n
 Additional Information: $extra\n";
+
+  
+$servername = "localhost";
+$username = "klcicomn_admin";
+$password = "";
+$dbname = "klcicomn_blog";
+
+// Create connection
+$conn = new mysqli($servername, $username, $password, $dbname);
+// Check connection
+if ($conn->connect_error) {
+    die("Connection failed: " . $conn->connect_error);
+} 
+
+$sql = "INSERT INTO connect (email, name, school, phone_num, location, contact_person, extra) VALUES ('$email', '$school', '$name', '$phone', '$location', '$contact', '$extra' )";
+
+$conn->query($sql);
 
 $user = "$email";
 $usersubject = "Thank you! KLCI";
